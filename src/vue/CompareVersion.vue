@@ -389,6 +389,14 @@
           default:
             ids = this.sameExternalIds;
         }
+
+        if (event.model.id === 2){
+          this.hideModel(this.secondModel);
+        }
+        else {
+          this.hideModel(this.firstModel)
+        }
+
         console.log( "isolate", event, this.removedId, this.newIds );
         this.viewer.isolate( ids, event.model );
 
@@ -405,9 +413,21 @@
           default:
             ids = this.sameExternalIds;
         }
+        if (event.model.id === 2){
+          this.hideModel(this.secondModel);
+        }
+        else {
+          this.hideModel(this.firstModel)
+        }
         this.viewer.select( ids, event.model,
           Autodesk.Viewing.SelectionMode.MIXED);
-
+      },
+      hideModel(model){
+        this.viewer.hideModel(model.id);
+        if (model.id === 2)
+          this.viewer.showModel(3);
+        else
+          this.viewer.showModel(2);
       }
     },
     watch: {
