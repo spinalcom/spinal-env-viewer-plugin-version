@@ -29,7 +29,7 @@
                     </v-flex>
                     <v-flex d-flex xs4>
                         <v-icon class="compare-icon" large>
-                            swap_horiz
+                            compare_arrows
                         </v-icon>
                     </v-flex>
                     <v-flex d-flex xs4>

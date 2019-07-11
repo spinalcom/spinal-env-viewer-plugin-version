@@ -38,7 +38,7 @@ export class OpenVersionButton extends SpinalContextApp {
       fontColor: '#ffffff'
     } );
     
-    this.action = this.loadModel.bind( this );
+    this.action = this.openPanel.bind( this );
   }
   
   isShown( option ) {
@@ -47,7 +47,7 @@ export class OpenVersionButton extends SpinalContextApp {
   
  
   
-  loadModel(  ) {
+  openPanel(  ) {
     const context = SpinalGraphService.getContext( 'BimFileContext' );
     const promises = [];
     
